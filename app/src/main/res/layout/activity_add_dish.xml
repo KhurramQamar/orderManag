@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddDish"
+    android:background="#F28500">
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="296dp"
+        android:layout_height="57dp"
+        android:text="Add Items to Menu"
+        android:textAlignment="center"
+        android:textColor="@color/common_google_signin_btn_text_dark_focused"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.469"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.074" />
+
+    <EditText
+        android:id="@+id/dish_name"
+        android:layout_width="306dp"
+        android:layout_height="39dp"
+        android:background="@drawable/rounded_corner_view"
+        android:ems="10"
+        android:hint="Dish Name"
+        android:inputType="textPersonName"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6"
+        app:layout_constraintVertical_bias="0.053" />
+
+    <EditText
+        android:id="@+id/dish_price"
+        android:layout_width="306dp"
+        android:layout_height="39dp"
+        android:background="@drawable/rounded_corner_view"
+        android:ems="10"
+        android:hint="Price"
+        android:inputType="number"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dish_name"
+        app:layout_constraintVertical_bias="0.038" />
+
+    <EditText
+        android:id="@+id/dish_desc"
+        android:layout_width="306dp"
+        android:layout_height="89dp"
+        android:background="@drawable/rounded_corner_view"
+        android:hint="Decription"
+        android:gravity="top"
+        android:inputType="textMultiLine"
+
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dish_price"
+        app:layout_constraintVertical_bias="0.05" />
+
+    <Button
+        android:id="@+id/add_button"
+        android:layout_width="306dp"
+        android:layout_height="39dp"
+        android:background="@drawable/rounded_corner_view"
+        android:text="add"
+        android:backgroundTint="#5D3FD3"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.514"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.618" />
+
+    <CheckBox
+        android:id="@+id/food"
+        android:layout_width="80dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="20dp"
+        android:text="Food"
+        android:buttonTint="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.163"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dish_desc"
+        app:layout_constraintVertical_bias="0.029" />
+
+    <CheckBox
+        android:id="@+id/Drink"
+        android:layout_width="80dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="28dp"
+        android:textColorHighlight="@color/white"
+        android:text="Drink"
+        android:buttonTint="@color/black"
+        app:layout_constraintEnd_toStartOf="@+id/Other"
+        app:layout_constraintHorizontal_bias="0.55"
+        app:layout_constraintStart_toEndOf="@+id/food"
+        app:layout_constraintTop_toBottomOf="@+id/dish_desc" />
+
+    <CheckBox
+        android:id="@+id/Other"
+        android:layout_width="80dp"
+        android:layout_height="35dp"
+        android:text="Other"
+        android:buttonTint="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.833"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dish_desc"
+        app:layout_constraintVertical_bias="0.092" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

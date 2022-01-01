@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "172686729150",
+    "project_id": "ordermanagement-43382",
+    "storage_bucket": "ordermanagement-43382.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:172686729150:android:8fae17db3f9f1f990463ef",
+        "android_client_info": {
+          "package_name": "com.example.ordermanagement"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "172686729150-vp0aefho8ph8qn35h6023bqrdvou4qdg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAFxVlfinFJ5JiX23snIyl8PgfPigM1dIo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "172686729150-vp0aefho8ph8qn35h6023bqrdvou4qdg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
