@@ -258,14 +258,7 @@ public class AddDish extends AppCompatActivity implements View.OnClickListener{
     public void onClick(View v) { //make sure only one chekbox will be chek
         switch (v.getId()) {
 
-            case R.id.Other:
-                if (food.isChecked()) {
-                    food.setChecked(false);
-                }
-
-                if (drink.isChecked()) {
-                    drink.setChecked(false);
-                }
+            
                 break;
             case R.id.Drink:
                 if (food.isChecked()) {
