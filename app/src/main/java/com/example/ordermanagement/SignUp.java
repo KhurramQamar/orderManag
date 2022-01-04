@@ -89,7 +89,31 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener {
         }
 
 
-       
+        if (FirstName.isEmpty()) {
+            editTextFirstName.setError("First Name Required");
+            editTextFirstName.requestFocus();
+            return;
+        }
+        if (LastName.isEmpty()) {
+            editTextLastName.setError("Last Name Required");
+            editTextLastName.requestFocus();
+            return;
+        }
+        if (Email.isEmpty()) {
+            editTextEmail.setError("Email Required");
+            editTextEmail.requestFocus();
+            return;
+        }
+        if (Password.isEmpty()) {
+            editTextPassword.setError("password is required");
+            editTextPassword.requestFocus();
+            return;
+        }
+        if (Password.length() < 6) {
+            editTextPassword.setError("password length should be higher than 6");
+            editTextPassword.requestFocus();
+            return;
+        }
 
         mAuth.createUserWithEmailAndPassword(Email, Password)
                 .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
