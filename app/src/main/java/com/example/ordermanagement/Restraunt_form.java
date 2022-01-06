@@ -78,7 +78,13 @@ public class Restraunt_form {
             this.description = description;
         }
 
-        
+        public String getUID() {
+            return UID;
+        }
+
+        public void setUID(String UID) {
+            this.UID = UID;
+        }
     }
 
 

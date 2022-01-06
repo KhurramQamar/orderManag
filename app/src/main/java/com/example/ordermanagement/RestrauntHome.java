@@ -94,7 +94,38 @@ public class RestrauntHome extends AppCompatActivity {
                 });
 
 
-       
+        activeOrders_listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                switch (activeOrders_list.get(i).getStatus()) {
+                    case "unhandled":
+                        update_status_DB(activeOrders_list.get(i).getOrder_num(), "seen");
+                        activeOrders_list.get(i).setStatus("seen");
+                        break;
+                    case "seen":
+                        update_status_DB(activeOrders_list.get(i).getOrder_num(), "preparation");
+                        activeOrders_list.get(i).setStatus("preparation");
+                        break;
+                    case "preparation":
+                        update_status_DB(activeOrders_list.get(i).getOrder_num(), "on the way");
+                        activeOrders_list.get(i).setStatus("on the way");
+                        break;
+                    case "on the way":
+                        update_status_DB(activeOrders_list.get(i).getOrder_num(), "received");
+                        activeOrders_list.get(i).setStatus("received");
+                        break;
+                    case "received":
+                        update_status_DB(activeOrders_list.get(i).getOrder_num(), "done");
+                        activeOrders_list.get(i).setStatus("done");
+                        break;
+                    case "done":
+                        activeOrders_list.remove(i);
+                        break;
+                }
+                activeOrders_adapter = new ArrayAdapter<OrderForm>(RestrauntHome.this, android.R.layout.simple_list_item_1, activeOrders_list);
+                activeOrders_listView.setAdapter(activeOrders_adapter);
+            }
+        });
         //listener to move to the settings activity when the image is clicked
 
     }

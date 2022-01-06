@@ -106,7 +106,38 @@ public class RestrauntSignUp extends AppCompatActivity implements View.OnClickLi
         
 
 
-       
+        if (rest_name.isEmpty()) {
+            RestrauntName.setError("Restaurant Name is required");
+            RestrauntName.requestFocus();
+            return;
+        }
+        if (phone.isEmpty()) {
+            Phone.setError("Phone is empty");
+            Phone.requestFocus();
+            return;
+        }
+        if (location.isEmpty()) {
+            city.setError("city is empty");
+            city.requestFocus();
+            return;
+        }
+        if (descrip.isEmpty()) {
+            description.setError("description is empty");
+            description.requestFocus();
+            return;
+        }
+
+        if (fast.isChecked()) {
+            type = "fast";
+        } else if (chinese.isChecked()) {
+            type = "chinese";
+        } else if (continental.isChecked()){
+            type = "continental";
+        }
+        else
+        {
+            type="home";
+        }
 
 
        Restraunt_form rest = new Restraunt_form(rest_name, location, phone,type,descrip,UID);
