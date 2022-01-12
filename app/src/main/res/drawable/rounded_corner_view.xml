@@ -11,6 +11,6 @@
 
     <!--- This is the background color -->
     <solid android:color="#ffff" />
-    <padding android:left="18dp"/>
+    <padding android:left="19dp"/>
 
 </shape>
