@@ -69,16 +69,7 @@ public class UserHome extends AppCompatActivity {
 
 
 
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                Intent i_rest_page = new Intent(UserHome.this, makeOrder.class);
-                //
-                i_rest_page.putExtra("rest_uid", rest_f.get(i).getUID());
-                startActivity(i_rest_page);
-            }
-        });
-        getData();
+       
     }
 
 
