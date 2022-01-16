@@ -136,5 +136,10 @@ public class Menu extends AppCompatActivity implements View.OnClickListener {
 
             }
         }
-        
+        public void get_arrtype(ArrayList<String> arr_list, ArrayList<Dish_Add> dishes){ //add the dish info to arr, if arr is not empty clear it first
+
+            for (int i = 0; i < dishes.size(); i++){
+                arr_list.add(dishes.get(i).to_string());
+            }
+        }
     }

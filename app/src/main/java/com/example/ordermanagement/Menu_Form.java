@@ -70,7 +70,43 @@ public class Menu_Form {
 
     }
 
-    
+    public boolean add_food_dish(Dish_Add dish){
+        return food_list.add(dish);
+
+    }
+    public boolean add_drink(Dish_Add drink){
+        return drink_list.add(drink);
+    }
+    public boolean add_other_dish(Dish_Add desert){
+        return others_list.add(desert);
+    }
+    public int get_numof_dishes(){
+        int sum =  drink_list.size() + food_list.size() + others_list.size();
+        return sum;
+    }
+    public boolean remove_dish(String name, String type){
+        if (type == "foods"){
+            for (int i = 0; i < food_list.size(); i++){
+                String str = food_list.get(i).getDish_name();
+                if (str.equals(name)){
+                    Dish_Add temp = food_list.get(i);
+                    food_list.remove(temp);
+                    return true;
+                }
+            }
+            return false;
+        }
+        else if (type == "Drink"){
+            for (int i = 0; i < drink_list.size(); i++){
+                String str = drink_list.get(i).getDish_name();
+                if (str.equals(name)){
+                    Dish_Add temp = drink_list.get(i);
+                    drink_list.remove(temp);
+                    return true;
+                }
+            }
+            return false;
+        }
         else if (type == "others"){
             for (int i = 0; i < others_list.size(); i++){
                 String str = others_list.get(i).getDish_name();
