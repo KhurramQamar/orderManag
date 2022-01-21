@@ -74,18 +74,7 @@ public class OrderHistoryUser extends AppCompatActivity {
 
             }
         });
-        listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                Intent intent = new Intent(OrderHistoryUser.this, Place_Order.class);
-                OrderForm temp_order = orders_list.get(i);
-                Bundle extras = new Bundle();
-                put_to_extras(temp_order, extras);
-                intent.putExtra("extras", extras);
-                startActivity(intent);
-                finish();
-            }
-        });
+        
     }
 
     private void put_to_extras(OrderForm temp_order, Bundle extras) {
