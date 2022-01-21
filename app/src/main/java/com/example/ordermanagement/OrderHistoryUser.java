@@ -53,14 +53,7 @@ public class OrderHistoryUser extends AppCompatActivity {
                             OrderForm order = new OrderForm(order_num, rest_id, client_id, status);
 
                             DataSnapshot dishes_ordered = snep.child("dishs_orderd");
-                            for (DataSnapshot child_dt : dishes_ordered.getChildren()) {
-                                double price = child_dt.child("price").getValue(double.class);
-                                String dish_name = child_dt.child("dish_name").getValue(String.class);
-                                String dish_discription = child_dt.child("dish_discription").getValue(String.class);
-                                Dish_Add dish = new Dish_Add(price, dish_name, dish_discription);
-                                order.addDish(dish);
-                            }
-                            orders_list.add(order);
+                            
                         }
                     }
                 }
